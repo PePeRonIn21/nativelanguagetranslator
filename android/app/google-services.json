@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "242145121746",
+    "project_id": "nativelanguagetranslator-e3965",
+    "storage_bucket": "nativelanguagetranslator-e3965.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242145121746:android:05862e71918d6463e3640b",
+        "android_client_info": {
+          "package_name": "com.example.nativetranslator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOeRRyjAqZkHQQoZPnOqnhvWe-M8mIh0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
