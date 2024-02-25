@@ -3,6 +3,8 @@ import 'registration_page.dart';
 import 'landing_page.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +20,7 @@ class LoginPage extends StatelessWidget {
                   width: 150.0,
                   height: 150.0,
                 ),
-                Text(
+                const Text(
                   'Language Link',
                   style: TextStyle(
                     fontSize: 24.0,
@@ -26,7 +28,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Text(
+                const Text(
                   '"Your Native Tongue Translator"',
                   style: TextStyle(
                     fontSize: 10.0,
@@ -35,7 +37,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 32.0),
+                const SizedBox(height: 32.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
@@ -43,7 +45,7 @@ class LoginPage extends StatelessWidget {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Password',
@@ -52,38 +54,38 @@ class LoginPage extends StatelessWidget {
                   ),
                   obscureText: true,
                 ),
-                SizedBox(height: 32.0),
+                const SizedBox(height: 32.0),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => LandingPage()),
+                      MaterialPageRoute(builder: (context) => const LandingPage()),
                     );
                   },
-                  child: Text('Login'),
+                  child: const Text('Login'),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => RegistrationPage(),
+                        builder: (context) => const RegistrationPage(),
                       ),
                     );
                   },
-                  child: Text('Create an account'),
+                  child: const Text('Create an account'),
                 ),
-                SizedBox(height: 16.0),
-                Text(
+                const SizedBox(height: 16.0),
+                const Text(
                   'Or login with',
                   style: TextStyle(color: Colors.black),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 60.0,
                       height: 60.0,
                       child: LayoutBuilder(
@@ -102,8 +104,8 @@ class LoginPage extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(width: 16.0),
-                    Container(
+                    const SizedBox(width: 16.0),
+                    SizedBox(
                       width: 60.0,
                       height: 60.0,
                       child: LayoutBuilder(

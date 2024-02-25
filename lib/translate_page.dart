@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class TranslatePage extends StatefulWidget {
+  const TranslatePage({super.key});
+
   @override
   _TranslatePageState createState() => _TranslatePageState();
 }
 
 class _TranslatePageState extends State<TranslatePage> {
   bool _isSwapped = false;
-  TextEditingController _textController1 = TextEditingController();
-  TextEditingController _textController2 = TextEditingController();
+  final TextEditingController _textController1 = TextEditingController();
+  final TextEditingController _textController2 = TextEditingController();
   int _wordCount1 = 0;
   int _wordCount2 = 0;
-  stt.SpeechToText _speech = stt.SpeechToText();
+  final stt.SpeechToText _speech = stt.SpeechToText();
   bool _isListening = false;
   String _text = '';
 
@@ -88,11 +90,11 @@ class _TranslatePageState extends State<TranslatePage> {
             'Translate',
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .titleLarge!
                 .copyWith(color: Colors.black),
           ),
         ),
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
@@ -101,7 +103,7 @@ class _TranslatePageState extends State<TranslatePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -109,7 +111,7 @@ class _TranslatePageState extends State<TranslatePage> {
                   child: GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white,
@@ -118,7 +120,7 @@ class _TranslatePageState extends State<TranslatePage> {
                       child: Center(
                         child: Text(
                           _isSwapped ? 'CENTRAL SUBANEN' : 'ENGLISH',
-                          style: TextStyle(fontSize: 20, color: Colors.black),
+                          style: const TextStyle(fontSize: 20, color: Colors.black),
                           softWrap: false,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -126,22 +128,22 @@ class _TranslatePageState extends State<TranslatePage> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 ElevatedButton(
                   onPressed: _swapTexts,
-                  child: Icon(Icons.swap_horiz, size: 50),
                   style: ElevatedButton.styleFrom(
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(10),
+                    shape: const CircleBorder(),
+                    padding: const EdgeInsets.all(10),
                     backgroundColor: Colors.black,
                   ),
+                  child: const Icon(Icons.swap_horiz, size: 50),
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 Expanded(
                   child: GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white,
@@ -150,7 +152,7 @@ class _TranslatePageState extends State<TranslatePage> {
                       child: Center(
                         child: Text(
                           _isSwapped ? 'ENGLISH' : 'CENTRAL SUBANEN',
-                          style: TextStyle(fontSize: 20, color: Colors.black),
+                          style: const TextStyle(fontSize: 20, color: Colors.black),
                           softWrap: false,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -160,29 +162,29 @@ class _TranslatePageState extends State<TranslatePage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Flexible(
               child: TextField(
                 controller: _textController1,
                 onChanged: (value) => _updateWordCount1(),
                 maxLines: null,
                 expands: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     '$_wordCount1 / 5000',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(width: 200),
+                const SizedBox(width: 200),
                 Align(
                   alignment: Alignment.centerRight,
                   child: GestureDetector(
@@ -199,7 +201,7 @@ class _TranslatePageState extends State<TranslatePage> {
                     ),
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.centerRight,
                   child: Icon(
                     Icons.spatial_audio_off,
@@ -208,37 +210,37 @@ class _TranslatePageState extends State<TranslatePage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Flexible(
               child: TextField(
                 controller: _textController2,
                 onChanged: (value) => _updateWordCount2(),
                 maxLines: null,
                 expands: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     '$_wordCount2 / 5000',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(width: 200),
-                Align(
+                const SizedBox(width: 200),
+                const Align(
                   alignment: Alignment.centerRight,
                   child: Icon(
                     Icons.copy,
                     size: 30,
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.centerRight,
                   child: Icon(
                     Icons.spatial_audio_off,

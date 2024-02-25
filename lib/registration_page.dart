@@ -3,6 +3,8 @@ import 'landing_page.dart';
 import 'login_page.dart';
 
 class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +21,7 @@ class RegistrationPage extends StatelessWidget {
                   width: 150.0,
                   height: 150.0,
                 ),
-                Text(
+                const Text(
                   'Language Link',
                   style: TextStyle(
                     fontSize: 24.0,
@@ -27,7 +29,7 @@ class RegistrationPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Text(
+                const Text(
                   '"Your Native Tongue Translator"',
                   style: TextStyle(
                     fontSize: 10.0,
@@ -36,8 +38,8 @@ class RegistrationPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 16.0),
-                Text(
+                const SizedBox(height: 16.0),
+                const Text(
                   'Create an Account',
                   style: TextStyle(
                     fontSize: 24.0,
@@ -45,7 +47,7 @@ class RegistrationPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 32.0),
+                const SizedBox(height: 32.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'First Name',
@@ -53,7 +55,7 @@ class RegistrationPage extends StatelessWidget {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Middle Name',
@@ -61,7 +63,7 @@ class RegistrationPage extends StatelessWidget {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Last Name',
@@ -69,7 +71,7 @@ class RegistrationPage extends StatelessWidget {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
@@ -77,7 +79,7 @@ class RegistrationPage extends StatelessWidget {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Password',
@@ -86,7 +88,7 @@ class RegistrationPage extends StatelessWidget {
                   ),
                   obscureText: true,
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Phone Number',
@@ -94,38 +96,38 @@ class RegistrationPage extends StatelessWidget {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LandingPage(),
+                        builder: (context) => const LandingPage(),
                       ),
                     );
                   },
-                  child: Text('Register'),
+                  child: const Text('Register'),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 TextButton(
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
-                  child: Text('Back to login'),
+                  child: const Text('Back to login'),
                 ),
-                SizedBox(height: 16.0),
-                Text('Or register with',
+                const SizedBox(height: 16.0),
+                const Text('Or register with',
                     style: TextStyle(
                       color: Colors.black,
                     )),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 70.0,
                       height: 70.0,
                       child: LayoutBuilder(
@@ -144,8 +146,8 @@ class RegistrationPage extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(width: 16.0),
-                    Container(
+                    const SizedBox(width: 16.0),
+                    SizedBox(
                       width: 70.0,
                       height: 70.0,
                       child: LayoutBuilder(
